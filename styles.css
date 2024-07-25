@@ -24,6 +24,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 24px;
+    margin-bottom: 0.5em;
 }
 
 nav ul {
@@ -58,6 +59,17 @@ section {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 150px;
+    position: relative; /* To position the image inside the section */
+}
+
+.about-me-image {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensure the image fits within the boundaries without distortion */
 }
 
 footer {
@@ -68,4 +80,13 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Add spacing to paragraphs */
+p {
+    margin-bottom: 0.5em; /* Adjust this value to control spacing between paragraphs */
+}
+
+h2 {
+    margin-bottom: 0.5em;
 }

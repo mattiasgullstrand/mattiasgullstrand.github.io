@@ -48,5 +48,30 @@
         <p>&copy; 2024 Mattias Gullstrand. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function showSection() {
+                // Get all sections
+                const sections = document.querySelectorAll("main section");
+                // Get current hash, default to #about-me
+                const hash = window.location.hash || "#about-me";
+                // Loop through sections and show/hide based on the hash
+                sections.forEach(section => {
+                    if ("#" + section.id === hash) {
+                        section.style.display = "block";
+                    } else {
+                        section.style.display = "none";
+                    }
+                });
+            }
+
+            // Show the correct section on initial load
+            showSection();
+
+            // Listen for hash changes to show the correct section
+            window.addEventListener("hashchange", showSection);
+        });
+    </script>
+
 </body>
 </html>

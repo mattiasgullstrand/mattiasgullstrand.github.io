@@ -52,6 +52,7 @@ main {
 }
 
 section {
+    display: none; /* Hide all sections by default */
     margin-top: 40px;
     background: #fff;
     padding: 20px;

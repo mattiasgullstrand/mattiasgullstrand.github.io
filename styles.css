@@ -63,22 +63,23 @@ section {
 }
 
 .about-me-content {
-    display: grid;
-    grid-template-columns: 1fr 150px; /* Text takes 1 fraction of the space, image takes 150px */
-    grid-gap: 20px;
+    position: relative;
 }
 
 .about-me-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-right: 170px; /* Add some padding to the right to make space for the image */
 }
 
 .about-me-image {
+    top: 1000px;
+    float: right; /* Float the image to the right */
     width: 150px;
     height: 150px;
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image fits within the boundaries without distortion */
+    margin-left: 20px; /* Adds space between the image and text */
+    margin-bottom: 20px; /* Adds space below the image */
+    margin-top: -20px;
 }
 
 footer {
@@ -102,17 +103,13 @@ h2 {
 
 /* Responsive Design: Adjust layout for smaller screens */
 @media (max-width: 768px) {
-    .about-me-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
     .about-me-image {
-        position: top;
+        float: none;
+        display: block;
         margin: 0 auto 20px; /* Center the image and add bottom margin */
     }
 
     .about-me-text {
-        text-align: center;
+        padding-right: 0;
     }
 }

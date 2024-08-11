@@ -23,9 +23,18 @@
     <main>
         <section id="about-me">
             <h2>About me</h2>
-            <p>Write a brief introduction about yourself here.</p>
-            <p> My grilfriend's name is Amanda. </p>
-            <img src="images/Mattias_Gullstrand_Qasa_crop.jpeg" alt="Mattias Gullstrand" class="about-me-image">
+            <div class="about-me-content">
+                <div class="about-me-text">
+                    <p>Write a brief introduction about yourself here.</p>
+                    <p>My girlfriend's name is Amanda "Korven" Björner.</p>
+                    <p>This is a new paragraph that provides more information about your background or interests.</p>
+                    <p>This is a new paragraph that provides more information about your background or interests.</p>
+                    <p>This is a new paragraph that provides more information about your background or interests.</p>
+                    <p>This is a new paragraph that provides more information about your background or interests.</p>
+                    <p>This is a new paragraph that provides more information about your background or interests.</p>
+                </div>
+                <img src="images/Mattias_Gullstrand_Qasa_crop.jpeg" alt="Mattias Gullstrand" class="about-me-image">
+            </div>
         </section>
 
         <section id="education">
@@ -42,7 +51,6 @@
             <h2>Job experience</h2>
             <p>List your job experience, positions held, and relevant work here.</p>
         </section>
-
     </main>
 
     <footer>
@@ -52,11 +60,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             function showSection() {
-                // Get all sections
                 const sections = document.querySelectorAll("main section");
-                // Get current hash, default to #about-me
                 const hash = window.location.hash || "#about-me";
-                // Loop through sections and show/hide based on the hash
                 sections.forEach(section => {
                     if ("#" + section.id === hash) {
                         section.style.display = "block";
@@ -66,10 +71,7 @@
                 });
             }
 
-            // Show the correct section on initial load
             showSection();
-
-            // Listen for hash changes to show the correct section
             window.addEventListener("hashchange", showSection);
         });
     </script>
